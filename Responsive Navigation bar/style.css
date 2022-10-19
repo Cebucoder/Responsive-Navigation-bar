@@ -1,0 +1,167 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	width: 100%;
+	height: 100vh;
+	background:url(back.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+/*first*/
+.nav{
+	width: 100%;
+	height: 70px;
+	background: #003;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.logo{
+	color: #fff;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	font-size: 13px;
+	margin-left: 40px;
+	z-index: 2;
+}
+.navlinks{
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	padding: 0 40px 0 40px;
+	position: relative;
+	transition: all 0.6s ease;
+}
+.navlinks ul{
+	display: flex;
+	flex-direction: row;
+
+}
+.navlinks li{
+	padding: 15px 40px;
+	list-style: none;
+}
+.navlinks a{
+	color: #fff;
+	text-decoration: none;
+}
+
+/*second*/
+.hamburger{
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+}
+.hamburger i{
+	font-size: 25px;
+	color: #fff;
+}
+.close{
+	visibility: hidden;
+}
+.content{
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	text-align: center;
+	
+}
+.content button{
+	width: 200px;
+	height: 60px;
+	border-radius: 50px;
+	margin-top: 30px;
+	background: #0008;
+	color: #fff;
+	font-size: 16px;
+	border: 2px solid #fff;
+	transition: 0.4s;
+}
+.content button:hover{
+	transform: scale(1.1);
+}
+.content h1{
+	color: #fff;
+	font-size: 70px;
+	transition: 0.6s ease;
+
+}
+/*media qurry fro responsive*/
+
+@media only screen and (max-width: 800px){
+	.hamburger{
+		visibility: visible;
+	}
+	.content h1{
+		color: #fff;
+		font-size: 50px;
+		transition: 0.6s ease;
+	}
+	.close{
+		width: 70px;
+		height: 70px;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		top: 0;
+		right: 0;
+		color: #fff;
+		font-size: 25px;
+		visibility: visible;
+	}
+	.navlinks{
+		width: 100%;
+		height: 100%;
+		left: 100%;
+		background: #003;
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		transition: all 0.6s;
+		z-index: 1;
+		transition: all 0.6s ease;
+	}
+	.nav-open{
+		left: 0%;
+	}
+	.navlinks ul{
+		margin-top: 70px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	.navlinks li{
+		margin: 35px 0;
+	}
+	.navlinks a{
+		font-size: 16px;
+	}
+}
+
